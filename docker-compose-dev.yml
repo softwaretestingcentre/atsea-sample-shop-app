@@ -1,5 +1,3 @@
-version: "3.1"
-
 services:
   database:
     build: 
@@ -7,13 +5,13 @@ services:
     image: atsea_db
     environment:
       POSTGRES_USER: gordonuser
+      POSTGRES_PASSWORD: gordonpass
       POSTGRES_DB: atsea
+      POSTGRES_HOST_AUTH_METHOD: trust
     ports:
       - "5432:5432" 
     networks:
       - back-tier
-    secrets:
-      - postgres_password
 
   appserver:
     build:
@@ -23,18 +21,17 @@ services:
     ports:
       - "8080:8080"
       - "5005:5005"
+    depends_on:
+      - database
     networks:
       - front-tier
       - back-tier
-    secrets:
-      - postgres_password
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/atsea
+      SPRING_DATASOURCE_USERNAME: gordonuser
+      SPRING_DATASOURCE_PASSWORD: gordonpass
+      SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.PostgreSQLDialect
 
-secrets:
-  postgres_password:
-    file: ./devsecrets/postgres_password
-    
 networks:
   front-tier:
   back-tier:
-  payment:
-    driver: overlay

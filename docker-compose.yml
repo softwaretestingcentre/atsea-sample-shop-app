@@ -1,57 +1,37 @@
-version: "3.1"
-
 services:
-  reverse_proxy:
-    build: ./reverse_proxy
-    user: nginx
-
   database:
     build: 
        context: ./database
     image: atsea_db
-    user: postgres
     environment:
       POSTGRES_USER: gordonuser
-      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+      POSTGRES_PASSWORD: gordonpass
       POSTGRES_DB: atsea
+      POSTGRES_HOST_AUTH_METHOD: trust
     ports:
       - "5432:5432" 
     networks:
       - back-tier
-    secrets:
-      - postgres_password
 
   appserver:
     build:
        context: app
        dockerfile: Dockerfile
     image: atsea_app
-    user: gordon
     ports:
-      - "8080:8080" 
+      - "8080:8080"
       - "5005:5005"
+    depends_on:
+      - database
     networks:
       - front-tier
       - back-tier
-    secrets:
-      - postgres_password
-
-  payment_gateway:
-    build:
-      context: payment_gateway
-    networks:
-      - payment
-    secrets:
-      - payment_token
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/atsea
+      SPRING_DATASOURCE_USERNAME: gordonuser
+      SPRING_DATASOURCE_PASSWORD: gordonpass
+      SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.PostgreSQLDialect
 
 networks:
   front-tier:
   back-tier:
-  payment:
-    driver: overlay
-
-secrets:
-  postgres_password:
-    file: ./devsecrets/postgres_password
-  payment_token:
-    file: ./devsecrets/payment_token
