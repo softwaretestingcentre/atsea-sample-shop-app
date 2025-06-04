@@ -2,64 +2,176 @@
   {
     "productId": 1,
     "name": "Unusable Security",
-    "price": 25.0,
+    "price": 2.0,
     "description": "Unusuable security is not security",
     "image": "/images/1.png"
   },
   {
     "productId": 2,
     "name": "Valentine's Day",
-    "price": 25.0,
+    "price": 4.0,
     "description": "Love is meant to be shared",
     "image": "/images/2.png"
   },
   {
     "productId": 3,
     "name": "Docker Tooling",
-    "price": 25.0,
+    "price": 8.0,
     "description": "Docker provides a whole suite of tools",
     "image": "/images/3.png"
   },
   {
     "productId": 4,
     "name": "Docker Presents",
-    "price": 25.0,
+    "price": 16.0,
     "description": "Giving gifts every day",
     "image": "/images/4.png"
   },
   {
     "productId": 5,
     "name": "Valentine's Day",
-    "price": 25.0,
+    "price": 32.0,
     "description": "Love is in the air",
     "image": "/images/5.png"
   },
   {
     "productId": 6,
     "name": "Docker Babies",
-    "price": 25.0,
+    "price": 64.0,
     "description": "For those with a cute little whale",
     "image": "/images/6.png"
   },
   {
     "productId": 7,
     "name": "Experimental",
-    "price": 25.0,
+    "price": 128.0,
     "description": "Trying the latest",
     "image": "/images/7.png"
   },
   {
     "productId": 8,
     "name": "Docker for Developers",
-    "price": 25.0,
+    "price": 256.0,
     "description": "Escape the App Dependency Matrix",
     "image": "/images/8.png"
   },
   {
     "productId": 9,
     "name": "DockerCon Copenhagen",
-    "price": 25.0,
+    "price": 512.0,
     "description": "DockerCon returns to Europe",
     "image": "/images/9.png"
+  },
+  {
+    "productId": 10,
+    "name": "DockerCon Malmo",
+    "price": 1024.0,
+    "description": "DockerCon returns",
+    "image": "/images/10.png"
+  },
+  {
+    "productId": 44,
+    "name": "DockerCon London",
+    "price": 1025.0,
+    "description": "DockerCon innit",
+    "image": "/images/11.png"
+  },
+  {
+    "productId": 45,
+    "name": "DockerCon 12",
+    "price": 1025.0,
+    "description": "Docker 12",
+    "image": "/images/12.png"
+  },
+  {
+    "productId": 46,
+    "name": "DockerCon 13",
+    "price": 1025.0,
+    "description": "Docker 13",
+    "image": "/images/13.png"
+  },
+  {
+    "productId": 47,
+    "name": "DockerCon 14",
+    "price": 1025.0,
+    "description": "Docker 14",
+    "image": "/images/14.png"
+  },
+  {
+    "productId": 48,
+    "name": "DockerCon 15",
+    "price": 1025.0,
+    "description": "Docker 15",
+    "image": "/images/15.png"
+  },
+  {
+    "productId": 49,
+    "name": "DockerCon 16",
+    "price": 1025.0,
+    "description": "Docker 16",
+    "image": "/images/16.png"
+  },
+  {
+    "productId": 50,
+    "name": "DockerCon 17",
+    "price": 1025.0,
+    "description": "Docker 17",
+    "image": "/images/17.png"
+  },
+  {
+    "productId": 51,
+    "name": "DockerCon 18",
+    "price": 1025.0,
+    "description": "Docker 18",
+    "image": "/images/18.png"
+  },
+  {
+    "productId": 52,
+    "name": "DockerCon 19",
+    "price": 1025.0,
+    "description": "Docker 19",
+    "image": "/images/19.png"
+  },
+  {
+    "productId": 53,
+    "name": "DockerCon 20",
+    "price": 1025.0,
+    "description": "Docker 20",
+    "image": "/images/20.png"
+  },
+  {
+    "productId": 54,
+    "name": "DockerCon 21",
+    "price": 1025.0,
+    "description": "Docker 21",
+    "image": "/images/21.png"
+  },
+  {
+    "productId": 56,
+    "name": "DockerCon 22",
+    "price": 1025.0,
+    "description": "Docker 22",
+    "image": "/images/22.png"
+  },
+  {
+    "productId": 57,
+    "name": "DockerCon 23",
+    "price": 1025.0,
+    "description": "Docker 23",
+    "image": "/images/23.png"
+  },
+  {
+    "productId": 58,
+    "name": "DockerCon 24",
+    "price": 1025.0,
+    "description": "Docker 24",
+    "image": "/images/24.png"
+  },
+  {
+    "productId": 59,
+    "name": "DockerCon 25",
+    "price": 1025.0,
+    "description": "Docker 25",
+    "image": "/images/25.png"
   }
 ]
